@@ -12,4 +12,5 @@ class Produto extends Model
     protected $fillable = [
         'descricao', 'qtd', 'precoUnitario', 'precoVenda'
     ];
+    
 }
