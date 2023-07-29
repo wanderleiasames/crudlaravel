@@ -17,13 +17,9 @@ class ProdutoController extends Controller
 public function index(): View     
     {
         //
-        $produtos = Produto::latest()->paginate(5);
-
         return view(' produtos.index',compact('produtos'))
         ->with('i',(request()->input('page',1)-1)*5);
-
     }
-
     /**
      * Show the form for creating a new resource.
      *
@@ -33,7 +29,6 @@ public function index(): View
     {
         return view('produtos.create');
     }
-
     /**
      * Store a newly created resource in storage.
      *
@@ -42,7 +37,7 @@ public function index(): View
      */
     public function store(Request $request): RedirectResponse
     {
-        $_REQUEST->validate([
+        $request->validate([
             'descricao' => 'required',
             'qtd' => 'required',
             'precoUnitario' => 'required',

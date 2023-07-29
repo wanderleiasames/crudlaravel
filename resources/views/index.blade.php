@@ -43,7 +43,7 @@
 
                     <a class="btn btn-primary" href="{{ route('produtos.edit',$produto->id) }}">Editar</a>
 
-                    @csrf
+                    @csrf 
                     @method('DELETE')
 
                     <button type="submit" class="btn btn-danger">Excluir</button>
