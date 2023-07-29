@@ -85,6 +85,7 @@ public function index(): View
             'descricao' => 'required',
             'qtd' => 'required',
             'precoUnitario' => 'required',
+            'precoVenda' => 'require',
         ]);
 
         $produto->update($request->all());
