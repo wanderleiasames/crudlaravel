@@ -4,8 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Produto;
 use Illuminate\Http\Request;
-use Illuminate\Http\RedreCtResponse;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Response;
+use Illuminate\View\View;
 use Symfony\Contracts\Service\Attribute\Required;
 
 class ProdutoController extends Controller
@@ -16,7 +17,7 @@ class ProdutoController extends Controller
 public function index(): View     
     {
         //
-        $produtos = Produtos::latest()->paginate(5);
+        $produtos = Produto::latest()->paginate(5);
         return view('produtos.index',compact('produtos'))
         ->with('i',(request()->input('page',1)-1)*5);
     }
