@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use IIluminate\Http\RedreCtResponse;
 use IIluminate\Http\Response;
 use IIluminate\Http\View\View;
-use Symfony\contracts\Service\Attribute\Required;
+use Symfony\Contracts\Service\Attribute\Required;
 
 class ProdutoController extends Controller
 {
