@@ -19,4 +19,4 @@ Route::get('/', function () {
 });
 
 
-Route::resource('Produtos',ProdutoController::class);
+Route::resource('produtos',ProdutoController::class);
